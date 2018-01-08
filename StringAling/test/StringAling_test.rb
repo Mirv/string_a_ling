@@ -26,6 +26,10 @@ class StringAlingTest < Minitest::Test
       refute_match /[!.?]$/, @theClass.tons_of_spam("")
     end
     
+    def test_string_length_increases
+      @more_greetings = StringAling::MoreGreetings.new
+      assert @theClass.greeting.length < @more_greetings.greet_three.length
+    end
     
     def test_BaseString_class_method
       assert StringAling::BaseString.welcome, "hi hi hello welcome all"

@@ -17,7 +17,7 @@ module StringAling
             return "hi hi hello"
         end
         
-        # Overwrite & in this case adds emphasis
+        # Overwrite & by default this case adds emphasis
         def tons_of_spam(emphasis = "!")
             super
         end
