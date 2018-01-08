@@ -28,7 +28,7 @@ class StringAlingTest < Minitest::Test
     
     def test_string_length_increases
       @more_greetings = StringAling::MoreGreetings.new
-      assert @theClass.greeting.length < @more_greetings.greet_three.length
+      assert @theClass.greeting.length <  @more_greetings.greet_animals.length
     end
     
     def test_BaseString_class_method

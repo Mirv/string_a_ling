@@ -4,17 +4,17 @@ module StringAling
     class Spam
         # Default ending
         def tons_of_spam(punctuation = ".")
-           return "Trash everywhere#{punctuation}"
+           "Trash everywhere#{punctuation}"
         end
     end
     
     class BaseString < Spam
         def self.welcome
-            return "hi hi hello welcome all"
+            "hi hi hello welcome all"
         end
     
         def greeting
-            return "hi hi hello"
+            "hi hi hello"
         end
         
         # Overwrite & by default this case adds emphasis
@@ -22,4 +22,10 @@ module StringAling
             super
         end
     end  
+    
+    class MoreGreetings < BaseString
+        def greet_animals
+            "#{greeting} cats, dogs & other fine pets"
+        end
+    end
 end
