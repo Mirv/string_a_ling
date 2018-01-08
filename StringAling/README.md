@@ -1,8 +1,16 @@
 # StringAling
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/StringAling`. To experiment with that code, run `bin/console` for an interactive prompt.
+StringAling is a module that holds a collection of classes.
 
-TODO: Delete this and the text above, and describe your gem
+It exists as a demonstration of the basics for class inheritance, use of super 
+with parameters, instances methods & class methods in TDD style design with 
+Minitest.
+
+The second part of this is the repositories issues list & git commit history will
+demonstrate refactoring as the class inheritance while functional does not make
+complete sense ... as we started with Spam being inherited by BaseString.
+
+Repository: https://github.com/Mirv/string_a_ling
 
 ## Installation
 
@@ -22,7 +30,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once installed, either create an instance of the object or use the class methods.
+
 
 ## Development
 
