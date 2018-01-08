@@ -15,7 +15,7 @@ class StringAlingTest < Minitest::Test
   end
   
   def test_class_variable
-    assert @theClass.class_punctuation, "."
+    assert_match @theClass.my_punctuation, '.'
   end
   
   def test_string_length_increases

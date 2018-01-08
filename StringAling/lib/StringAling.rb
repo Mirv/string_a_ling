@@ -1,14 +1,13 @@
 require "StringAling/version"
 
 module StringAling
-    class Spam
-        # Default ending
-        def tons_of_spam(punctuation = ".")
-           "Trash everywhere#{punctuation}"
+    class BaseString 
+        attr_accessor :my_punctuation
+        
+        def initialize
+            @my_punctuation = '.'
         end
-    end
-    
-    class BaseString < Spam
+        
         def self.welcome
             "hi hi hello welcome all"
         end
@@ -29,3 +28,11 @@ module StringAling
         end
     end
 end
+
+
+    # class Spam
+    #     # Default ending
+    #     def tons_of_spam(punctuation = ".")
+    #       "Trash everywhere#{punctuation}"
+    #     end
+    # end
