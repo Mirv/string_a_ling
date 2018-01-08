@@ -34,9 +34,4 @@ class StringAlingTest < Minitest::Test
     def test_BaseString_class_method
       assert StringAling::BaseString.welcome, "hi hi hello welcome all"
     end
-    
-    # def test_BaseString_instance_method
-    #   theString = BaseString.new
-    #   assert 
-    # end
 end

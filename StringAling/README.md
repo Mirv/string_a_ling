@@ -12,6 +12,8 @@ complete sense ... as we started with Spam being inherited by BaseString.
 
 Repository: https://github.com/Mirv/string_a_ling
 
+Stage 1 issues - list https://github.com/Mirv/string_a_ling/issues/1
+
 ## Installation
 
 Add this line to your application's Gemfile:
