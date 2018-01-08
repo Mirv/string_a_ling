@@ -12,8 +12,8 @@ module StringAling
             "hi hi hello welcome all"
         end
     
-        def greeting
-            "hi hi hello"
+        def greeting(punctuation = my_punctuation)
+            "hi hi hello#{punctuation}"
         end
     end  
     

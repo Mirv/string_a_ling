@@ -26,14 +26,19 @@ class StringAlingTest < Minitest::Test
     @more_string = StringAling::MoreString.new
     assert_match @theClass.my_punctuation, @more_string.my_punctuation
   end
-  
+
+  def test_class_instance_method_defaults
+    assert_match @theClass.my_punctuation, @theClass.greeting
+  end
+
+
+
+end
+
   # def test_string_length_increases
   #   @more_greetings = StringAling::MoreGreetings.new
   #   assert @theClass.greeting.length <  @more_greetings.greet_animals.length
   # end
-  
-
-end
 
 
   # def test_spam_default_empahasis 
