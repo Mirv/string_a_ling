@@ -1,7 +1,6 @@
 require "test_helper"
 
 class StringAlingTest < Minitest::Test
-  extend StringAling
   def setup 
     @theClass = StringAling::BaseString.new
   end
@@ -10,11 +9,11 @@ class StringAlingTest < Minitest::Test
     refute_nil ::StringAling::VERSION
   end
 
-  def test_class_loads
+  def test_BaseString_loads
     assert @theClass.class.name, "BaseString"
   end
   
-  def test_class_variable
+  def test_BaseString_variable
     assert_match @theClass.my_punctuation, '.'
   end
   
@@ -22,18 +21,30 @@ class StringAlingTest < Minitest::Test
     assert StringAling::BaseString.welcome, "hi hi hello welcome all"
   end
 
-  def test_MoreString_instance_var_defaults
-    @more_string = StringAling::MoreString.new
-    assert_match @theClass.my_punctuation, @more_string.my_punctuation
+  def test_BaseString_instance_method_defaults
+    assert_match "hi hi hello#{@theClass.my_punctuation}", @theClass.greeting
   end
-
-  def test_class_instance_method_defaults
-    assert_match @theClass.my_punctuation, @theClass.greeting
+  
+  def test_MoreString_welcome
+    assert StringAling::BaseString.welcome, "hi hi hello welcome all"
   end
-
-
-
+  
+  def test_MoreString_greet_animals
+    @greetings = StringAling::MoreString.new
+    assert @theClass.greeting.length <  @greetings.greet_animals.length
+  end
+  
+  
+  
+  # def test_MoreString_greet_super
+  #   @greetings = StringAling::MoreString.new
+  #   assert_match @greetings.greeting, @theClass.
+  # end
+  
 end
+
+    # @more_string = StringAling::MoreString.new
+    # assert_match @theClass.my_punctuation, @more_string.my_punctuation
 
   # def test_string_length_increases
   #   @more_greetings = StringAling::MoreGreetings.new

@@ -19,7 +19,14 @@ module StringAling
     
     class MoreString < BaseString
         def greet_animals
-            "#{greeting} cats, dogs & other fine pets"
+            "#{self.greeting} cats, dogs & other fine pets"
+        end
+        
+        def self.welcome
+        end
+        
+        def greeting(punctuation = '!')
+            # super
         end
     end
 end
