@@ -15,14 +15,9 @@ module StringAling
         def greeting
             "hi hi hello"
         end
-        
-        # Overwrite & by default this case adds emphasis
-        def tons_of_spam(emphasis = "!")
-            super
-        end
     end  
     
-    class MoreGreetings < BaseString
+    class MoreString < BaseString
         def greet_animals
             "#{greeting} cats, dogs & other fine pets"
         end
@@ -36,3 +31,8 @@ end
     #       "Trash everywhere#{punctuation}"
     #     end
     # end
+    
+        # # Overwrite & by default this case adds emphasis
+        # def tons_of_spam(emphasis = "!")
+        #     super
+        # end
