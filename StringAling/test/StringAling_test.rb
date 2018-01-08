@@ -25,14 +25,20 @@ class StringAlingTest < Minitest::Test
     assert_match "hi hi hello#{@theClass.my_punctuation}", @theClass.greeting
   end
   
-  def test_MoreString_welcome
-    assert StringAling::BaseString.welcome, "hi hi hello welcome all"
+  def test_MoreString_welcome_super
+    assert StringAling::MoreString.welcome, StringAling::BaseString.welcome
   end
   
   def test_MoreString_greet_animals
     @greetings = StringAling::MoreString.new
     assert @theClass.greeting.length <  @greetings.greet_animals.length
   end
+  
+  def test_MoreString_greeting_overwrite_punc
+    @greetings = StringAling::MoreString.new
+    assert @greetings.greeting, @theClass.greeting
+  end
+  
   
   
   

@@ -23,23 +23,12 @@ module StringAling
         end
         
         def self.welcome
+            super
         end
         
         def greeting(punctuation = '!')
-            # super
+            super
         end
     end
 end
 
-
-    # class Spam
-    #     # Default ending
-    #     def tons_of_spam(punctuation = ".")
-    #       "Trash everywhere#{punctuation}"
-    #     end
-    # end
-    
-        # # Overwrite & by default this case adds emphasis
-        # def tons_of_spam(emphasis = "!")
-        #     super
-        # end
