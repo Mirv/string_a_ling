@@ -1,6 +1,8 @@
 require "test_helper"
 
 class StringAlingTest < Minitest::Test
+  extend StringAling
+  
   def setup 
     @theClass = StringAling::BaseString.new
   end
@@ -36,36 +38,11 @@ class StringAlingTest < Minitest::Test
   
   def test_MoreString_greeting_overwrite_punc
     @greetings = StringAling::MoreString.new
-    assert @greetings.greeting, @theClass.greeting
+    assert_match "hi hi hello!", @greetings.greeting
   end
   
-  
-  
-  
-  # def test_MoreString_greet_super
-  #   @greetings = StringAling::MoreString.new
-  #   assert_match @greetings.greeting, @theClass.
-  # end
-  
+  def test_MoreString_greet_aliens
+    # @greetings = StringAlingTest:StringAling::MoreString.new
+    assert_match "#{StringAling::MoreString.welcome} the 'lings, what's the rush?", StringAling::MoreString.greet_aliens
+  end
 end
-
-    # @more_string = StringAling::MoreString.new
-    # assert_match @theClass.my_punctuation, @more_string.my_punctuation
-
-  # def test_string_length_increases
-  #   @more_greetings = StringAling::MoreGreetings.new
-  #   assert @theClass.greeting.length <  @more_greetings.greet_animals.length
-  # end
-
-
-  # def test_spam_default_empahasis 
-  #   assert_match /^Trash everywhere[!.?]$/, @theClass.tons_of_spam(".")
-  # end
-  
-  # def test_spam_overwriting_empahasis 
-  #   assert_match /^Trash everywhere[!.?]$/, @theClass.tons_of_spam("!")
-  # end
-  
-  # def test_spam_default_empahasis 
-  #   refute_match /[!.?]$/, @theClass.tons_of_spam("")
-  # end
